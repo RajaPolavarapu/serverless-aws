@@ -61,7 +61,8 @@ Test the endpoints using tools like Postman or cURL:
 
 - Register a new user: `POST /register`
 - Login: `POST /login`
-- Access protected routes: `GET /protected`
+- Access protected routes: `GET /validate`
+- Simple GET Route: `GET /hello`
 
 ## Deployment
 
