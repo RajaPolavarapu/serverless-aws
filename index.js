@@ -53,7 +53,7 @@ const verifyToken = (req, res, next) => {
 };
 
 app.get('/hello', (req, res) => {
-    res.json({ message: `Hello World!` });
+    res.json({ message: `Hello World! New Git Action Deployment` });
 });
 
 app.get('/validate', verifyToken, (req, res) => {
