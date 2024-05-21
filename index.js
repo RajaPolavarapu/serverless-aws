@@ -57,7 +57,7 @@ app.get('/hello', (req, res) => {
 });
 
 app.get('/validate', verifyToken, (req, res) => {
-    res.json({ message: `Hello, ${req.user.username}` });
+    res.json({ message: `Hello, ${req.body.username}` });
 });
 
 module.exports.handler = serverless(app);
