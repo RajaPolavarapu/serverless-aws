@@ -1,0 +1,24 @@
+service: serverless-auth
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http:
+          path: /
+          method: any
+      - http:
+          path: /{proxy+}
+          method: any
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000
+    timeout: 10 # Adjust this value as needed, in seconds
